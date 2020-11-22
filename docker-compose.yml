@@ -1,7 +1,7 @@
 version: '3.0'
 services:
   hdfs:
-    image: dketley/sdc-hdfs
+    image: hdfs:1
     hostname: hdfs
     container_name: hdfs
     ports:
@@ -14,7 +14,7 @@ services:
   #    context: docker/streamsets
   #    args:
   #      - PACKAGES_TO_INSTALL=streamsets-datacollector-hdp_2_5-lib,streamsets-datacollector-jython_2_7-lib
-    image: dketley/sdc  # Comment this out if you need to build the docker image locally
+    image: sdc:1  # Comment this out if you need to build the docker image locally
     hostname: sdc
     container_name: sdc
     links:
